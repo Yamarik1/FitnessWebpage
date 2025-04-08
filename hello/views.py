@@ -12,7 +12,10 @@ import json
 
 
 def home(request):
-    return HttpResponse("Hello, Django")
+    return render(
+        request,
+        'hello/home.html'
+    )
 
 def hello_there(request, name):
     
