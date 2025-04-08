@@ -1,0 +1,58 @@
+{% load static %}
+<script src="{% static 'hello/table.js' %}" type="text/javascript"></script>
+
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'hello/site.css' %}">
+    <script src="//d3js.org/d3.v3.min.js"></script>
+</head>
+
+<form method="post"></form>
+
+
+<body>
+
+    <!-- <svg id="#myPlot" style="width:500px;height:500px"></svg> -->
+
+    <table id="data" , border="2" , onload="test_stuff()">
+        <tbody>
+
+            <tr>
+                {% for name in header %}
+                <th id="header{{forloop.counter}}">{{name}}</th>
+                {% endfor %}
+            </tr>
+            {% for day in list %}
+            <tr>
+                {% for item in day %}
+
+                <td>{{item}}</td>
+
+                {% endfor %}
+
+            </tr>
+            {% endfor %}
+            <tr>
+
+            </tr>
+        </tbody>
+    </table>
+</body>
+<!-- <script src="{% static 'hello/table.js' %}"></script> -->
+
+<script>
+    header_color()
+
+</script>
+
+
+<script>
+    const headerJs = JSON.parse("{{headerJs | escapejs}}")
+    const listJs = JSON.parse("{{listJs | escapejs}}")
+
+    get_insight(headerJs, listJs)
+</script>
+
+<!--<button onclick="test_stuff()">Click me!</button>
+ {{avgList}} -->
+<!-- <p>{{ list }}</p> -->

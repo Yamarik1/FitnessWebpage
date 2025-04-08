@@ -1,0 +1,17 @@
+<!-- <label for="time">Choose the time frame:</label>
+
+<select name="time" id="time">
+    <option value=1>One day</option>
+    <option value=7>Last Week</option>
+    <option value=30>Last Month</option>
+    <input type="submit" value="Submit" />
+
+</select>
+
+<input type="submit" value="Submit" /> -->
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
