@@ -154,7 +154,10 @@ function get_insight(header, list) {
             console.log(avgList)
 
             const insightDiv = document.createElement("div")
-            const testText = document.createTextNode("Test Text")
+
+
+
+            // const testText = document.createTextNode("Daily Average: " + avgList[0] + "<br>Monthly Average: " + avgList[1] + "<br>Yearly Average:" + avgList[2])
 
 
 
@@ -165,7 +168,20 @@ function get_insight(header, list) {
 
             insightDiv.classList.add("topLeft")
             insightDiv.style.left = insightOffset + 15
-            insightDiv.appendChild(testText)
+            const dayAvg = "Daily Average: " + avgList[0]
+            const monthAvg = "Monthly Average: " + avgList[1]
+            const yearAvg = "Yearly Average: " + avgList[2]
+
+            insightDiv.appendChild(document.createTextNode(dayAvg))
+            insightDiv.appendChild(document.createElement("br"))
+
+            insightDiv.appendChild(document.createTextNode(monthAvg))
+            insightDiv.appendChild(document.createElement("br"))
+
+            insightDiv.appendChild(document.createTextNode(yearAvg))
+            insightDiv.appendChild(document.createElement("br"))
+
+            // insightDiv.appendChild(testText)
 
             backButton.addEventListener('click', function () {
                 table.style.display = ''
