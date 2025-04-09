@@ -1,21 +1,32 @@
 {% load static %}
-
+<script src="{% static 'hello/home.js' %}" type="text/javascript"></script>
 <html>
 
 <head>
     <link rel="stylesheet" href="{% static 'hello/home.css' %}">
-    <script src="{% static 'hello/table.js' %}" type="text/javascript"></script>
+
     <div class="header center">Test</div>
 </head>
 
-<body class="gradientBackground">
-    <div id="fileLink">
-        <a class="file_link" href="/upload">Link Here</a>
+<body class="gradientBackground" onload="onload()">
+    <!-- <div id="container"> -->
+    <div>
+        <a id="fileLink" class="file_link" href="/upload">Link Here</a>
+        <a id="fileLinkHover" class="hidden" href="/upload">New Link</a>
+
     </div>
+    <div id="line"></div>
+    <!-- <div>
+            <a id="fileLink" class="file_link" href="/upload">Link Here</a>
+            <a id="fileLinkHover" class="hidden" href="/upload">New Link</a>
+
+        </div>-->
+    <!-- </div> -->
+
 </body>
+
+</html>
 
 <script>
     apply_hover()
 </script>
-
-</html>

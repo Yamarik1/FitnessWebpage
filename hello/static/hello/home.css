@@ -1,20 +1,39 @@
 .file_link:link {
-    background-color: white;
-    color: black;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 100px 200px;
-    border: 10px solid black;
+    border: 10px solid rgb(0, 0, 0);
     text-align: center;
     text-decoration: none;
-    display: inline-block
+    display: inline-block;
+    position: absolute;
 }
 
-.file_link:hover {
+/* .file_link:hover {
     text-decoration: none;
     background-color: grey
+} */
+
+.file_link:visited {
+    color: black
+}
+
+#line {
+    width: 485px;
+    height: 10px;
+    position: absolute;
+    background: rgb(218, 8, 8);
+}
+
+#container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: rgb(128, 44, 44);
 }
 
 .gradientBackground {
-    background-image: linear-gradient(rgb(255, 136, 0), black);
+    background-image: linear-gradient(rgb(255, 136, 0), rgb(175, 50, 50));
     opacity: 1;
 }
 
@@ -25,4 +44,12 @@
 
 .center {
     text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: inline-block;
 }
