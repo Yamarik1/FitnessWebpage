@@ -1,5 +1,11 @@
+@property --c {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: rgb(255, 255, 255);
+}
+
 .file_link:link {
-    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(white, var(--c));
     color: rgb(0, 0, 0);
     padding: 100px 200px;
     border: 10px solid rgb(0, 0, 0);
@@ -31,6 +37,85 @@
     position: relative;
     background: rgb(128, 44, 44);
 }
+
+.cAnimate {
+    background-image: linear-gradient(white, var(--c));
+    animation: color_animation 1s linear 0s 1 normal forwards;
+
+    /* animation: color_animation 1s linear infinite alternate */
+}
+
+@keyframes color_animation {
+
+    from {
+        --c: white;
+    }
+
+    25% {
+        /* background-image: linear-gradient(white, rgb(180, 180, 180));
+         */
+        --c: rgb(199, 199, 199);
+    }
+
+    50% {
+        /* background-image: linear-gradient(white, rgb(150, 150, 150)); */
+        --c: rgb(167, 167, 167);
+    }
+
+    75% {
+        /* background-image: linear-gradient(white, rgb(120, 120, 120)); */
+        --c: rgb(126, 126, 126);
+    }
+
+    to {
+        /* background-image: linear-gradient(white, rgb(90, 90, 90)); */
+        --c: rgb(66, 66, 66);
+    }
+
+}
+
+/* @keyframes link_animation {
+    0% {
+        top: 0px
+    }
+
+    2% {
+        top: 10px
+    }
+
+    4% {
+        top: 20px
+    }
+
+    8% {
+        top: 40px
+    }
+
+    10% {
+        top: 50px
+    }
+
+    90% {
+        top: 200px
+    }
+
+    92% {
+        top: 210px
+    }
+
+    96% {
+        top: 240px
+    }
+
+    98% {
+        top: 280px
+    }
+
+    100% {
+        top: 300px
+    }
+
+} */
 
 .gradientBackground {
     background-image: linear-gradient(rgb(255, 136, 0), rgb(175, 50, 50));
