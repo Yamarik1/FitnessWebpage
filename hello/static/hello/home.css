@@ -12,24 +12,15 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    position: absolute;
+    /* position: absolute; */
 }
 
-/* .file_link:hover {
-    text-decoration: none;
-    background-color: grey
-} */
+
 
 .file_link:visited {
     color: black
 }
 
-#line {
-    width: 485px;
-    height: 10px;
-    position: absolute;
-    background: rgb(218, 8, 8);
-}
 
 #container {
     width: 400px;
@@ -40,7 +31,7 @@
 
 .cAnimate {
     background-image: linear-gradient(white, var(--c));
-    animation: color_animation 1s linear 0s 1 normal forwards;
+    animation: color_animation .2s linear 0s 1 normal forwards;
 
     /* animation: color_animation 1s linear infinite alternate */
 }
@@ -120,6 +111,25 @@
 .gradientBackground {
     background-image: linear-gradient(rgb(255, 136, 0), rgb(175, 50, 50));
     opacity: 1;
+}
+
+.file_input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.file_input+label {
+    background-color: #4CAF50;
+    color: rgb(82, 0, 0);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.file_input:focus+label,
+.file_input+label:hover {
+    background-color: #367c39;
 }
 
 .header {

@@ -1,7 +1,10 @@
 from django import forms
+from django.forms import FileInput
     
 class UploadFileForm(forms.Form):
-    file = forms.FileField()
+    file_field = forms.FileField(widget=FileInput(attrs={'class': 'file_input'}))
+
+        
 
 class dateForm(forms.Form):
     CHOICES = [(1, 'Past Day'), (7, 'Past Week'), (30, 'Past Month'), (365, 'Past Year')]
