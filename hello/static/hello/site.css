@@ -4,3 +4,8 @@
     left: 8px;
 
 }
+
+.gradientBackground {
+    background-image: linear-gradient(rgb(255, 136, 0), rgb(175, 50, 50));
+    opacity: 1;
+}

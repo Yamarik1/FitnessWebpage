@@ -1,5 +1,14 @@
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
-</form>
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'hello/home.css' %}">
+
+</head>
+
+<body class="gradientBackground">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>

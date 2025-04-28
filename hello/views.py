@@ -26,10 +26,7 @@ def hello_there(request, name):
         request,
         'hello/hello_there.html',
         temp
-        # {
-            # 'name': name,
-            # 'date': datetime.now()
-        # }
+
     )
 
 def file_select(request):
@@ -49,7 +46,7 @@ def upload_file(request):
         form = UploadFileForm(request.POST, request.FILES)
 
         if form.is_valid():
-            uploaded_file = request.FILES['file']
+            uploaded_file = request.FILES['file_field']
             # Process the file (e.g., read content)
             file_content = uploaded_file.read().decode('utf-8')
             clean_file_content = clean_file(file_content)
@@ -82,17 +79,3 @@ def present_data(request):
 
     return render(request, 'hello/year_select.html', {'form': form})
 
-    # if request.method == 'POST':
-    #     form = dateForm(request.POST)
-    #     if form.is_valid():
-    #         selected_value = form.cleaned_data['date_dropdown']
-    #         sublist = get_sublist(selected_value, clean_file_content)
-    #         avgList = find_average(sublist)
-    #         # print(sublist)
-    #         context = {'header': sublist[0], 'list': sublist[1:], 'headerJs': json.dumps(sublist[0]), 'listJs': json.dumps(sublist[1:])}
-    #         return render(request, 'hello/result.html', context)
-    # else:
-    #     form = dateForm()
-
-    # return render(request, 'hello/user_date.html', {'form':form} )
-    #return render(request, 'hello/file_display.html', context)

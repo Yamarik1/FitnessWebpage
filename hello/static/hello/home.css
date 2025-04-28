@@ -120,8 +120,8 @@
 }
 
 .file_input+label {
-    background-color: #4CAF50;
-    color: rgb(82, 0, 0);
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -129,7 +129,7 @@
 
 .file_input:focus+label,
 .file_input+label:hover {
-    background-color: #367c39;
+    background-color: #4e4e4e;
 }
 
 .header {
